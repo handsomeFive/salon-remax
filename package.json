@@ -9,7 +9,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "remax build -t wechat -w",
-    "build": "cross-env NODE_ENV=production remax build -t wechat"
+    "dev:client": "rimraf ./dist & cross-env REMAX_APP_ENV=client remax build  -t wechat -w",
+    "dev:backstage": "rimraf ./dist & cross-env REMAX_APP_ENV=backstage remax build -t wechat -w -m",
+    "build": "cross-env NODE_ENV=production remax build -t wechat",
+    "build:client": "rimraf ./dist & cross-env REMAX_APP_ENV=client  NODE_ENV=production remax build  -t wechat -w",
+    "build:backstage": "rimraf ./dist & cross-env REMAX_APP_ENV=backstage  NODE_ENV=production remax build -t wechat -w -m"
   },
   "dependencies": {
     "react": "^16.14.0",

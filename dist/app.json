@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/client/index"
+  ],
+  "subpackages": [
+    {
+      "root": "pages-client",
+      "pages": [
+        "appointment/index"
+      ]
+    }
+  ],
+  "sitemapLocation": "sitemap.json"
+}
