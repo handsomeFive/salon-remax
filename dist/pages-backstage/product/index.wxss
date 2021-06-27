@@ -1,0 +1,210 @@
+@import "./../../remax-styles.wxss";
+.listItem {
+  display: flex;
+  height: 128rpx;
+  padding: 0 24rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.listItem image {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 24rpx;
+}
+.listItemPart {
+  display: flex;
+  align-items: center;
+}
+.addIcon {
+  position: fixed;
+  left: 24rpx;
+  bottom: 108rpx;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.form {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .btn {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer .btn.cancel {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer .btn.ok {
+  background: #1e8aff;
+  color: #ffffff;
+}
+.item {
+  height: 100rpx;
+}
+
+.listItem___3800L {
+  display: flex;
+  height: 128rpx;
+  padding: 0 24rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.listItem___3800L image {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 24rpx;
+}
+.listItemPart___2w_8F {
+  display: flex;
+  align-items: center;
+}
+.addIcon___2OxnC {
+  position: fixed;
+  left: 24rpx;
+  bottom: 108rpx;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.form___3RhKh {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.footer___3lW73 {
+  display: flex;
+  justify-content: space-between;
+}
+.footer___3lW73 .btn___3DgQX {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer___3lW73 .btn___3DgQX.cancel___35Sbq {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer___3lW73 .btn___3DgQX.ok___3YULj {
+  background: #1e8aff;
+  color: #ffffff;
+}
+.item____ZujJ {
+  height: 100rpx;
+}
+
+@keyframes centerShow___2i2-B {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.modalRoot___1WlMK {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: z-index 0s ease 0.4s;
+}
+
+.modalRoot___1WlMK.archorTop___2CtUo {
+  justify-content: flex-start;
+}
+
+.modalRoot___1WlMK.archorBottom___1rMZh {
+  justify-content: flex-end;
+}
+
+.modalRoot___1WlMK.archorCenter___IXFGN {
+  justify-content: center;
+  align-items: center;
+}
+.modalRoot___1WlMK.show___1t5Z8 {
+  z-index: 100;
+  transition-delay: 0s;
+}
+
+.modalMask___1x9UH {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.modalMask___1x9UH.openMask___2Ke0w {
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modalContent___Jr85U {
+  position: relative;
+}
+.modalContent___Jr85U.modalBottomContent___3tSTN {
+  transform: translateY(100%);
+  transition: transform 0.3s ease 0s;
+}
+.modalContent___Jr85U.modalTopContent___254mF {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease 0s;
+}
+
+.modalContent___Jr85U.modalCenterContent___1vDs1 {
+  transform: scale(0);
+  opacity: 0;
+  animation-name: centerShow___2i2-B;
+  animation-delay: 0.1s;
+  animation-play-state: paused;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.modalContent___Jr85U.showContent___fhEgE {
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+.modalContent___Jr85U.showCenterContent___11TlP {
+  animation-play-state: running;
+}
+.modalContent___Jr85U.showContent___fhEgE {
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+

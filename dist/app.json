@@ -1,14 +1,20 @@
 {
   "pages": [
-    "pages/client/index"
+    "pages/backstage/index"
   ],
+  "window": {
+    "navigationBarTitleText": "backstage",
+    "navigationBarBackgroundColor": "#282c34"
+  },
   "subpackages": [
     {
-      "root": "pages-client",
+      "root": "pages-backstage",
       "pages": [
-        "appointment/index"
+        "authorized/index",
+        "consume/index",
+        "product/index",
+        "order/index"
       ]
     }
-  ],
-  "sitemapLocation": "sitemap.json"
+  ]
 }

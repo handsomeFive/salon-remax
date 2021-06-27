@@ -6,7 +6,7 @@ const api = require('./modals');
 
 cloud.init({ env: 'stone-spring-4gx0gbwre6def5a3' });
 
-exports.main = async (event) => {
+exports.main = async (event, context) => {
   const { url, data } = event;
   if (api[url]) {
     return api[url](data, cloud);

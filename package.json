@@ -16,8 +16,12 @@
     "build:backstage": "rimraf ./dist & cross-env REMAX_APP_ENV=backstage  NODE_ENV=production remax build -t wechat -w -m"
   },
   "dependencies": {
+    "annar": "^2.1.0",
     "react": "^16.14.0",
-    "remax": "^2.9.1"
+    "remax": "^2.9.1",
+    "sha1": "^1.1.1",
+    "weapp-qrcode-canvas-2d": "^1.1.1",
+    "weui-miniprogram": "^1.0.8"
   },
   "devDependencies": {
     "cross-env": "^7.0.2"

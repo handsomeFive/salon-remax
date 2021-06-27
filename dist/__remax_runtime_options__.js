@@ -940,8 +940,11 @@ module.exports = {
   }
 },
       pageEvents: {
-  "pages/client/index": [],
-  "pages-client/appointment/index": []
+  "pages/backstage/index": [],
+  "pages-backstage/authorized/index": [],
+  "pages-backstage/consume/index": [],
+  "pages-backstage/product/index": [],
+  "pages-backstage/order/index": []
 },
       appEvents: []
     }

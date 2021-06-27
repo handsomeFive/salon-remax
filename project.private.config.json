@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages-client/appointment/index",
+          "pathName": "pages-client/appointment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages-backstage/product/index",
+          "pathName": "pages-backstage/product/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages-client/order/index",
+          "pathName": "pages-client/order/index",
+          "query": "phoneNumber=13558982806",
+          "scene": null
+        },
+        {
+          "name": "pages-backstage/consume/index",
+          "pathName": "pages-backstage/consume/index",
+          "query": "phoneNumber=13558982806",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -6,8 +6,13 @@ module.exports = {
   },
   subpackages: [
     {
-      root: 'pages-client',
-      pages: ['product/index'],
+      root: 'pages-backstage',
+      pages: [
+        'authorized/index',
+        'consume/index',
+        'product/index',
+        'order/index',
+      ],
     },
   ],
 };

@@ -9,11 +9,11 @@
     "minified": true,
     "newFeature": true,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
-    "uglifyFileName": false,
+    "uglifyFileName": true,
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
@@ -41,5 +41,7 @@
   "simulatorPluginLibVersion": {},
   "appid": "wx591207f449a7748b",
   "projectname": "salon-remax",
+  "cloudbaseRoot": "cloudbase/",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {}
 }

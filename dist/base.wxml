@@ -3034,6 +3034,276 @@
   </slider>
 </template>
 
+<template name="REMAX_TPL_1_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_2_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_3_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_4_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_5_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_6_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_7_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_8_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_9_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
+<template name="REMAX_TPL_10_slideview-slideview-8d4aeff">
+  <slideview-slideview-8d4aeff
+    bindbuttontap="{{_h.v(i.props['bindbuttontap'])}}"
+    bindshow="{{_h.v(i.props['bindshow'])}}"
+    buttons="{{_h.v(i.props['buttons'])}}"
+    disable="{{_h.v(i.props['disable'])}}"
+    id="{{_h.v(i.props['id'])}}"
+    key="{{_h.v(i.props['key'])}}"
+    show="{{_h.v(i.props['show'])}}"
+    __key="{{_h.v(i.props['__key'])}}"
+  >
+<block wx:for="{{i.children}}" wx:key="*this">
+  <block wx:if="{{i.nodes[item].props['slot']}}">
+    <view slot="{{i.nodes[item].props['slot']}}"
+    >
+      <block wx:for="{{i.nodes[item].children}}" wx:key="*this" wx:for-item="sItem">
+        <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item].nodes[sItem], a: a, tid: tid + 1 }}" />
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: i.nodes[item], a: a, tid: tid + 1 }}" />
+  </block>
+</block>
+  </slideview-slideview-8d4aeff>
+</template>
+
 <template name="REMAX_TPL_1_swiper">
   <swiper
     animation="{{_h.v(i.props['animation'])}}"

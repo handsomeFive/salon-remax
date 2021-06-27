@@ -1,17 +1,75 @@
 const { isOk, getList } = require('../utils');
 
-async function addOrder(event, cloud) {
+async function recharge(event, cloud) {
   try {
-    const orderDB = cloud.database().collection('order');
-    const res = await orderDB.add({
-      data: { ...event },
-    });
-    if (isOk(res.errMsg)) {
-      return {
-        code: 200,
-        message: '创建成功',
-        data: { _id: res._id, ...event },
-      };
+    const db = cloud.database();
+    const _ = db.command;
+    const orderDB = db.collection('order');
+    const userDB = db.collection('user_salon');
+    const { data, errMsg } = await userDB
+      .where({
+        phoneNumber: event.phoneNumber,
+      })
+      .get();
+    if (isOk(errMsg)) {
+      if (!data.length) {
+        return { code: 300, message: '未查到该用户或未开通会员' };
+      } else {
+        await userDB
+          .doc(data[0]._id)
+          .update({ data: { balance: _.inc(event.recharge) } });
+        await orderDB.add({
+          data: {
+            type: 1,
+            date: new Date(),
+            user: data[0].nickName,
+            userPhoneNumber: event.phoneNumber,
+            money: event.payment,
+            info: event,
+          },
+        });
+        return { code: 200, message: '充值成功' };
+      }
+    } else {
+      return { code: 500, message: errMsg };
+    }
+  } catch (error) {
+    return { code: 500, message: error.errMsg };
+  }
+}
+
+async function consume(event, cloud) {
+  try {
+    const db = cloud.database();
+    const _ = db.command;
+    const orderDB = db.collection('order');
+    const userDB = db.collection('user_salon');
+    const { data, errMsg } = await userDB
+      .where({
+        phoneNumber: event.phoneNumber,
+      })
+      .get();
+    if (isOk(errMsg)) {
+      if (!data.length) {
+        return { code: 300, message: '未查到该用户或未开通会员' };
+      } else if (data[0].balance < 100) {
+        return { code: 300, message: '该会员余额小于100无法扣费' };
+      } else {
+        await userDB
+          .doc(data[0]._id)
+          .update({ data: { balance: _.inc(0 - event.cost) } });
+        await orderDB.add({
+          data: {
+            type: 2,
+            date: new Date(),
+            user: data[0].nickName,
+            userPhoneNumber: event.phoneNumber,
+            money: event.cost,
+            info: event,
+          },
+        });
+        return { code: 200, message: '充值成功' };
+      }
     } else {
       return { code: 500, message: res.errMsg };
     }
@@ -20,38 +78,18 @@ async function addOrder(event, cloud) {
   }
 }
 
-async function getTodayOrder(event, cloud) {
+async function getOrder(event, cloud) {
   try {
     const db = cloud.database();
     const orderDB = db.collection('order');
-    const _ = db.command;
-    const now = new Date();
-    const tomorrow = new Date(Number(now) + 24 * 60 * 60 * 1000);
-    const start = +new Date(
-      `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
-    );
-    const end = +new Date(
-      `${tomorrow.getFullYear()}-${
-        tomorrow.getMonth() + 1
-      }-${tomorrow.getDate()}`
-    );
-    return getList(orderDB.where({ date: _.gt(start).and(_.lt(end)) }));
-  } catch (error) {
-    return { code: 500, message: error.errMsg || error };
-  }
-}
-
-async function getLog(event, cloud) {
-  try {
-    const orderDB = cloud.database().collection('order');
-    // const res = await orderDB.
+    return getList(orderDB.where({ ...event }));
   } catch (error) {
     return { code: 500, message: error.errMsg };
   }
 }
 
 module.exports = {
-  '/order/add': addOrder,
-  '/order/log': getLog,
-  '/order/today': getTodayOrder,
+  '/order/recharge': recharge,
+  '/order/consume': consume,
+  '/order/list': getOrder,
 };

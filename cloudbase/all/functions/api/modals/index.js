@@ -1,12 +1,11 @@
 const userApi = require('./user');
-const productApi = require('./product');
 const authApi = require('./auth');
+const productApi = require('./product');
 const orderApi = require('./order');
 
 module.exports = {
   ...userApi,
-  ...productApi,
   ...authApi,
+  ...productApi,
   ...orderApi,
-  ...printApi,
 };
