@@ -1,0 +1,441 @@
+.app {
+  background-color: #f1f2f5;
+  height: 100vh;
+}
+.nav {
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+}
+.navTitle {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  z-index: 999;
+}
+.info {
+  width: 100%;
+  height: 380rpx;
+  position: relative;
+  background: #fff;
+}
+.info image {
+  width: 100%;
+  height: 342rpx;
+}
+.contentWrapper {
+  position: relative;
+  width: 100%;
+  height: 228rpx;
+  padding: 0 32rpx;
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 20rpx;
+  box-sizing: border-box;
+}
+.content {
+  background-color: #fff;
+  height: 228rpx;
+  width: auto;
+  flex: 1;
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0px 0px 20rpx 0px rgba(224, 233, 255, 0.6);
+}
+.function {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.functionTitle {
+  padding: 30rpx 0 24rpx;
+  font-size: 40rpx;
+  font-family: PingFang-SC-Bold, PingFang-SC;
+  font-weight: bold;
+  color: #454553;
+  line-height: 44rpx;
+}
+.items {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 24rpx;
+  justify-content: space-between;
+}
+.item {
+  background: #ffffff;
+  box-shadow: 0px 0px 20rpx 0px rgba(224, 233, 255, 0.6);
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  height: 154rpx;
+  width: 330rpx;
+  display: flex;
+  align-items: center;
+}
+.item image {
+  width: 74rpx;
+  height: 74rpx;
+  margin: 0 24rpx;
+}
+.item text {
+  font-size: 34rpx;
+  font-family: PingFang-SC-Bold, PingFang-SC;
+  font-weight: bold;
+  color: #454553;
+  line-height: 48rpx;
+}
+/* .avatarWrapper; */
+.avatarWrapper {
+  padding: 32rpx 32rpx 0 32rpx;
+  display: flex;
+  align-items: center;
+}
+.info .avatar {
+  width: 118rpx;
+  height: 118rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+}
+.nameText {
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #29374d;
+}
+.subtitle {
+  padding: 0 32rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #6a6a6a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subtitleBtn {
+  width: 200rpx;
+  /* height: 60px; */
+  border: 0;
+  margin: 0;
+}
+.icon {
+  position: absolute;
+  right: 84rpx;
+  top: 56rpx;
+}
+.qrCode {
+  position: fixed;
+  z-index: -100;
+}
+.form {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.formItem {
+  height: 108rpx;
+  padding-bottom: 24rpx;
+  font-size: 28rpx;
+  color: #bfbfbf;
+}
+.phone {
+  height: 108rpx;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .btn {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer .btn.cancel {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer .btn.ok {
+  background: #1e8aff;
+  color: #ffffff;
+}
+.item {
+  height: 100rpx;
+}
+
+.app___1Q_Yr {
+  background-color: #f1f2f5;
+  height: 100vh;
+}
+.nav___3ZKZi {
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+}
+.navTitle___Yo5JD {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  z-index: 999;
+}
+.info___21Pde {
+  width: 100%;
+  height: 380rpx;
+  position: relative;
+  background: #fff;
+}
+.info___21Pde image {
+  width: 100%;
+  height: 342rpx;
+}
+.contentWrapper___O-z5U {
+  position: relative;
+  width: 100%;
+  height: 228rpx;
+  padding: 0 32rpx;
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 20rpx;
+  box-sizing: border-box;
+}
+.content___VHA6J {
+  background-color: #fff;
+  height: 228rpx;
+  width: auto;
+  flex: 1;
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0px 0px 20rpx 0px rgba(224, 233, 255, 0.6);
+}
+.function___lBvnJ {
+  width: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.functionTitle___2lVzB {
+  padding: 30rpx 0 24rpx;
+  font-size: 40rpx;
+  font-family: PingFang-SC-Bold, PingFang-SC;
+  font-weight: bold;
+  color: #454553;
+  line-height: 44rpx;
+}
+.items___2lZIG {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 24rpx;
+  justify-content: space-between;
+}
+.item___3waYF {
+  background: #ffffff;
+  box-shadow: 0px 0px 20rpx 0px rgba(224, 233, 255, 0.6);
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  height: 154rpx;
+  width: 330rpx;
+  display: flex;
+  align-items: center;
+}
+.item___3waYF image {
+  width: 74rpx;
+  height: 74rpx;
+  margin: 0 24rpx;
+}
+.item___3waYF text {
+  font-size: 34rpx;
+  font-family: PingFang-SC-Bold, PingFang-SC;
+  font-weight: bold;
+  color: #454553;
+  line-height: 48rpx;
+}
+/* .avatarWrapper; */
+.avatarWrapper___1IugJ {
+  padding: 32rpx 32rpx 0 32rpx;
+  display: flex;
+  align-items: center;
+}
+.info___21Pde .avatar___7dLvT {
+  width: 118rpx;
+  height: 118rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+}
+.nameText___3LXAC {
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #29374d;
+}
+.subtitle___1w_GG {
+  padding: 0 32rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #6a6a6a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.subtitleBtn___20_F3 {
+  width: 200rpx;
+  /* height: 60px; */
+  border: 0;
+  margin: 0;
+}
+.icon___3smbi {
+  position: absolute;
+  right: 84rpx;
+  top: 56rpx;
+}
+.qrCode___1oJWS {
+  position: fixed;
+  z-index: -100;
+}
+.form___2oIug {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.formItem___2ANcP {
+  height: 108rpx;
+  padding-bottom: 24rpx;
+  font-size: 28rpx;
+  color: #bfbfbf;
+}
+.phone___2bzHw {
+  height: 108rpx;
+}
+.footer___Sv2yQ {
+  display: flex;
+  justify-content: space-between;
+}
+.footer___Sv2yQ .btn___25Ngw {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer___Sv2yQ .btn___25Ngw.cancel___2-Oks {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer___Sv2yQ .btn___25Ngw.ok___3pcin {
+  background: #1e8aff;
+  color: #ffffff;
+}
+.item___3waYF {
+  height: 100rpx;
+}
+
+@keyframes centerShow___2i2-B {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.modalRoot___1WlMK {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: z-index 0s ease 0.4s;
+}
+
+.modalRoot___1WlMK.archorTop___2CtUo {
+  justify-content: flex-start;
+}
+
+.modalRoot___1WlMK.archorBottom___1rMZh {
+  justify-content: flex-end;
+}
+
+.modalRoot___1WlMK.archorCenter___IXFGN {
+  justify-content: center;
+  align-items: center;
+}
+.modalRoot___1WlMK.show___1t5Z8 {
+  z-index: 100;
+  transition-delay: 0s;
+}
+
+.modalMask___1x9UH {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.modalMask___1x9UH.openMask___2Ke0w {
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modalContent___Jr85U {
+  position: relative;
+}
+.modalContent___Jr85U.modalBottomContent___3tSTN {
+  transform: translateY(100%);
+  transition: transform 0.3s ease 0s;
+}
+.modalContent___Jr85U.modalTopContent___254mF {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease 0s;
+}
+
+.modalContent___Jr85U.modalCenterContent___1vDs1 {
+  transform: scale(0);
+  opacity: 0;
+  animation-name: centerShow___2i2-B;
+  animation-delay: 0.1s;
+  animation-play-state: paused;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.modalContent___Jr85U.showContent___fhEgE {
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+.modalContent___Jr85U.showCenterContent___11TlP {
+  animation-play-state: running;
+}
+.modalContent___Jr85U.showContent___fhEgE {
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+

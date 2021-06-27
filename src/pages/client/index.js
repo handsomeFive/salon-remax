@@ -70,7 +70,7 @@ export default () => {
           break;
         case 3:
           // todo 更新电话号码
-          makePhoneCall({ phoneNumber: '13558982806' });
+          makePhoneCall({ phoneNumber: '13880041985' });
           break;
       }
     },

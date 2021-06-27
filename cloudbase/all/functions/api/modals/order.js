@@ -21,7 +21,7 @@ async function recharge(event, cloud) {
         await orderDB.add({
           data: {
             type: 1,
-            date: new Date(),
+            date: +new Date(),
             user: data[0].nickName,
             userPhoneNumber: event.phoneNumber,
             money: event.payment,
@@ -54,6 +54,8 @@ async function consume(event, cloud) {
         return { code: 300, message: '未查到该用户或未开通会员' };
       } else if (data[0].balance < 100) {
         return { code: 300, message: '该会员余额小于100无法扣费' };
+      } else if (data[0].balance < event.cost) {
+        return { code: 300, message: '余额不足，请充值' };
       } else {
         await userDB
           .doc(data[0]._id)
@@ -61,7 +63,7 @@ async function consume(event, cloud) {
         await orderDB.add({
           data: {
             type: 2,
-            date: new Date(),
+            date: +new Date(),
             user: data[0].nickName,
             userPhoneNumber: event.phoneNumber,
             money: event.cost,
@@ -82,7 +84,7 @@ async function getOrder(event, cloud) {
   try {
     const db = cloud.database();
     const orderDB = db.collection('order');
-    return getList(orderDB.where({ ...event }));
+    return getList(orderDB.orderBy('date', 'desc').where({ ...event }));
   } catch (error) {
     return { code: 500, message: error.errMsg };
   }

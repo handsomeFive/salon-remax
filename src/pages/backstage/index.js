@@ -15,6 +15,7 @@ import styles from './index.css';
 import useNavHeight from '../../hooks/useNavHeight';
 import useDidMount from '../../hooks/useDidMount';
 import bg from './images/bg.png';
+import { usePageEvent } from 'remax/macro';
 
 const menu = [
   { title: '充值', type: 1 },
@@ -62,6 +63,20 @@ export default () => {
   useDidMount(function () {
     // getStorageInfoSync().then(() => {});
     showLoading();
+    const info = getStorageSync('user_info');
+    if (info) {
+      setInfo(JSON.parse(info));
+      hideLoading();
+      // todo 获取今日预约数据
+    } else {
+      hideLoading();
+    }
+  });
+
+  usePageEvent('onShow', function () {
+    // getStorageInfoSync().then(() => {});
+    showLoading();
+    console.log('???');
     const info = getStorageSync('user_info');
     if (info) {
       setInfo(JSON.parse(info));

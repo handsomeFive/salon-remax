@@ -1,6 +1,14 @@
 import { useQuery } from 'remax';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
-import { View, Input, Picker, Button, scanCode, Text } from '@remax/wechat';
+import {
+  View,
+  Input,
+  Picker,
+  Button,
+  scanCode,
+  Text,
+  setNavigationBarTitle,
+} from '@remax/wechat';
 import { Ling, Icon } from 'annar';
 import styles from './index.css';
 import useDidMount from '../../hooks/useDidMount';
@@ -32,7 +40,7 @@ export default function () {
       const data = { phoneNumber: number };
       if (type === '1') {
         // 充值
-        data.recharge = Number(spend) + Number(presenter);
+        data.recharge = Number(spend) + (presenter ? Number(presenter) : 0);
         data.presenter = Number(presenter);
         data.payment = Number(spend);
       } else {
@@ -148,6 +156,7 @@ export default function () {
   );
 
   useDidMount(function () {
+    setNavigationBarTitle({ title: type === '1' ? '充值中心' : '消费中心' });
     if (type === '2') {
       request('/product/list').then(({ list }) => {
         setProduct(list);

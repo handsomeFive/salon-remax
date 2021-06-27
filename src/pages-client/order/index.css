@@ -22,9 +22,11 @@
 }
 .add {
   color: #52c41a;
+  text-align: right;
 }
 .del {
   color: #f5222d;
+  text-align: right;
 }
 .title {
   font-size: 32px;
