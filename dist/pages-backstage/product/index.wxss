@@ -1,0 +1,119 @@
+@import "./../../remax-styles.wxss";
+.listItem {
+  display: flex;
+  height: 128rpx;
+  padding: 0 24rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.listItem image {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 24rpx;
+}
+.listItemPart {
+  display: flex;
+  align-items: center;
+}
+.addIcon {
+  position: fixed;
+  left: 24rpx;
+  bottom: 108rpx;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.form {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .btn {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer .btn.cancel {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer .btn.ok {
+  background: #1e8aff;
+  color: #ffffff;
+}
+.item {
+  height: 100rpx;
+}
+
+.listItem___3800L {
+  display: flex;
+  height: 128rpx;
+  padding: 0 24rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.listItem___3800L image {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 24rpx;
+}
+.listItemPart___2w_8F {
+  display: flex;
+  align-items: center;
+}
+.addIcon___2OxnC {
+  position: fixed;
+  left: 24rpx;
+  bottom: 108rpx;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.form___3RhKh {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.footer___3lW73 {
+  display: flex;
+  justify-content: space-between;
+}
+.footer___3lW73 .btn___3DgQX {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer___3lW73 .btn___3DgQX.cancel___35Sbq {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer___3lW73 .btn___3DgQX.ok___3YULj {
+  background: #1e8aff;
+  color: #ffffff;
+}
+.item____ZujJ {
+  height: 100rpx;
+}
+

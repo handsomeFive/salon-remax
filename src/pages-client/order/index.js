@@ -10,6 +10,7 @@ import useDidMount from '../../hooks/useDidMount';
 import { request } from '../../utils';
 import List from '../../components/List';
 import styles from './index.css';
+import dayjs from 'dayjs';
 
 export default function (props) {
   const { query } = props.location;
@@ -47,7 +48,7 @@ export default function (props) {
   useDidMount(function () {
     showLoading();
     setNavigationBarTitle({ title: '消费记录' });
-    request('/order/list', { phoneNumber: query.phoneNumber })
+    request('/order/list', { userPhoneNumber: query.phoneNumber })
       .then(({ list }) => {
         setData(list);
         hideLoading();

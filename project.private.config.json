@@ -35,6 +35,11 @@
           "pathName": "pages-backstage/consume/index",
           "query": "phoneNumber=13558982806",
           "scene": null
+        },
+        {
+          "name": "pages-backstage/user/index",
+          "pathName": "pages-backstage/user/index",
+          "scene": null
         }
       ]
     }

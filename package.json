@@ -8,12 +8,9 @@
   "author": "zhangxi <zhangxi01@medlinker.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "remax build -t wechat -w",
-    "dev:client": "rimraf ./dist & cross-env REMAX_APP_ENV=client remax build  -t wechat -w",
-    "dev:backstage": "rimraf ./dist & cross-env REMAX_APP_ENV=backstage remax build -t wechat -w -m",
-    "build": "cross-env NODE_ENV=production remax build -t wechat",
-    "build:client": "rimraf ./dist & cross-env REMAX_APP_ENV=client  NODE_ENV=production remax build  -t wechat -w",
-    "build:backstage": "rimraf ./dist & cross-env REMAX_APP_ENV=backstage  NODE_ENV=production remax build -t wechat -w -m"
+    "dev": "rimraf ./dist & remax build  -t wechat -w",
+    "dev:test": "rimraf ./dist & NODE_ENV=production remax build  -t wechat -w",
+    "build": "rimraf ./dist & NODE_ENV=production remax build  -t wechat -w"
   },
   "dependencies": {
     "annar": "^2.1.0",

@@ -2,9 +2,12 @@ import './app.css';
 import { cloud } from 'remax/wechat';
 import 'annar/dist/annar.css';
 
-// dev:stone-spring-4gx0gbwre6def5a3
-// pro:pro-5gukjhm8763571a0
-cloud.init({ env: 'stone-spring-4gx0gbwre6def5a3' });
+const envId = {
+  development: 'salon-2ghjr0kcb8610c74',
+  production: 'salon-pro-9gyzqbsw939ef20a',
+}[process.env.NODE_ENV];
+
+cloud.init({ env: envId });
 const App = (props) => props.children;
 
 export default App;

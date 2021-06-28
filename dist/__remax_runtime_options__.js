@@ -941,8 +941,17 @@ module.exports = {
 },
       pageEvents: {
   "pages/client/index": [],
+  "pages/backstage/index": [
+    "onShow"
+  ],
   "pages-client/appointment/index": [],
-  "pages-client/order/index": []
+  "pages-client/order/index": [],
+  "pages-backstage/authorized/index": [],
+  "pages-backstage/consume/index": [],
+  "pages-backstage/product/index": [],
+  "pages-backstage/order/index": [],
+  "pages-backstage/user/index": [],
+  "pages-backstage/user-order/index": []
 },
       appEvents: []
     }

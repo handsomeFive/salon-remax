@@ -8,6 +8,8 @@ import {
   scanCode,
   Text,
   setNavigationBarTitle,
+  showLoading,
+  hideLoading,
 } from '@remax/wechat';
 import { Ling, Icon } from 'annar';
 import styles from './index.css';
@@ -22,6 +24,7 @@ export default function () {
   const [presenter, setPresenter] = useState(); // 赠送金额
   const [current, setCurrent] = useState(); //
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(false);
   const handleSelectProduct = useCallback(function (event) {
     setCurrent(event.detail.value);
   }, []);
@@ -36,6 +39,19 @@ export default function () {
   }, []);
   const handleCreate = useCallback(
     function () {
+      if (!number) {
+        ling.current.error('请输入手机号');
+        return;
+      } else if (type === '1' && !spend) {
+        ling.current.error('请输入充值金额');
+        return;
+      } else if (type === '1' && Number(spend) < 0) {
+        ling.current.error('充值金额不能小于0');
+        return;
+      } else if (type === '2' && !current) {
+        ling.current.error('请选择消费产品');
+        return;
+      }
       let path = type === '1' ? '/order/recharge' : '/order/consume';
       const data = { phoneNumber: number };
       if (type === '1') {
@@ -48,11 +64,17 @@ export default function () {
         data.cost = Number(product[current].price);
         data.product = product[current];
       }
+      showLoading();
+      setLoading(true);
       request(path, data)
         .then(() => {
+          hideLoading();
+          setLoading(false);
           ling.current.success(type === '1' ? '充值成功' : '消费成功');
         })
         .catch((error) => {
+          hideLoading();
+          setLoading(false);
           ling.current.error(error.message || '操作失败');
         });
     },
@@ -168,7 +190,12 @@ export default function () {
     <View className={styles.body}>
       <Ling ref={ling}></Ling>
       {type === '1' ? recharge : consume}
-      <Button type="primary" onTap={handleCreate}>
+      <Button
+        type="primary"
+        onTap={handleCreate}
+        loading={loading}
+        disabled={loading}
+      >
         确认
       </Button>
     </View>

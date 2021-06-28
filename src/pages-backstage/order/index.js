@@ -16,7 +16,7 @@ export default function (props) {
   const { query } = props.location;
   const [data, setData] = useState([]);
   const renderFunction = useCallback(function (data) {
-    const { type, info, date } = data;
+    const { type, info, date, user } = data;
     const front =
       type === 1
         ? `¥${info.payment}${info.presenter ? `(赠送¥${info.presenter})` : ''}`
@@ -31,7 +31,9 @@ export default function (props) {
       <View className={styles.item} key={data._id}>
         <View className={styles.content}>
           <View>
-            <Text className={styles.title}>{type === 1 ? '充值' : '消费'}</Text>
+            <Text className={styles.title}>
+              {type === 1 ? `${user}充值` : `${user}消费`}
+            </Text>
             <View className={styles.dec}>{front}</View>
           </View>
           <View>

@@ -1,0 +1,111 @@
+@import "./../../remax-styles.wxss";
+.app {
+  background-color: #f6f7f8;
+}
+
+.item {
+  background-color: #fff;
+  padding: 0 24rpx;
+  /* box-sizing: content-box; */
+}
+.info {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  height: 160rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add {
+  color: #52c41a;
+  text-align: right;
+}
+.del {
+  color: #f5222d;
+  text-align: right;
+}
+.title {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #2a2a2a;
+  line-height: 45rpx;
+}
+.dec {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #9a9a9a;
+  line-height: 40rpx;
+}
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  margin-right: 24rpx;
+}
+.part {
+  display: flex;
+  align-items: center;
+}
+
+.app___2e-A7 {
+  background-color: #f6f7f8;
+}
+
+.item___3PWD_ {
+  background-color: #fff;
+  padding: 0 24rpx;
+  /* box-sizing: content-box; */
+}
+.info___kcoCS {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content___1bbRP {
+  height: 160rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add___2uKrf {
+  color: #52c41a;
+  text-align: right;
+}
+.del___23MYg {
+  color: #f5222d;
+  text-align: right;
+}
+.title___2zxH1 {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #2a2a2a;
+  line-height: 45rpx;
+}
+.dec___1bMcO {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #9a9a9a;
+  line-height: 40rpx;
+}
+.avatar___1hanX {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  margin-right: 24rpx;
+}
+.part___39cFk {
+  display: flex;
+  align-items: center;
+}
+

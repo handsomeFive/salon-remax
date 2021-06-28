@@ -1,7 +1,24 @@
-const ClientConfig = require('./app-client.config');
-const BackstageConfig = require('./app-backstage.config');
-
-const config =
-  process.env.REMAX_APP_ENV === 'client' ? ClientConfig : BackstageConfig;
-
-module.exports = config;
+module.exports = {
+  pages: ['pages/client/index', 'pages/backstage/index'],
+  window: {
+    navigationBarTitleText: '雨 Salon',
+    navigationBarBackgroundColor: '#282c34',
+  },
+  subpackages: [
+    {
+      root: 'pages-client',
+      pages: ['appointment/index', 'order/index'],
+    },
+    {
+      root: 'pages-backstage',
+      pages: [
+        'authorized/index',
+        'consume/index',
+        'product/index',
+        'order/index',
+        'user/index',
+        'user-order/index',
+      ],
+    },
+  ],
+};

@@ -1,10 +1,15 @@
 import { cloud } from 'remax/wechat';
 
+const functionName = {
+  development: 'api-qa',
+  production: 'api',
+}[process.env.NODE_ENV];
+
 function request(path, params) {
   return new Promise(function (resolve, reject) {
     cloud
       .callFunction({
-        name: 'api',
+        name: functionName,
         data: { url: path, data: params },
       })
       .then(({ result }) => {

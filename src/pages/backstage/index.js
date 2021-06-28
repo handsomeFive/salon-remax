@@ -22,6 +22,7 @@ const menu = [
   { title: '消费', type: 2 },
   { title: '产品', type: 3 },
   { title: '流水', type: 4 },
+  { title: '用户', type: 5 },
 ];
 
 export default () => {
@@ -45,6 +46,9 @@ export default () => {
             break;
           case 4:
             navigateTo({ url: '/pages-backstage/order/index' });
+            break;
+          case 5:
+            navigateTo({ url: '/pages-backstage/user/index' });
             break;
         }
       }
@@ -76,7 +80,6 @@ export default () => {
   usePageEvent('onShow', function () {
     // getStorageInfoSync().then(() => {});
     showLoading();
-    console.log('???');
     const info = getStorageSync('user_info');
     if (info) {
       setInfo(JSON.parse(info));

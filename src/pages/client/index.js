@@ -47,8 +47,9 @@ export default () => {
         setInfo(userInfo);
         showLoading();
         request('/user/add', { ...userInfo, phoneNumber: '', balance: 0 })
-          .then(() => {
+          .then(({ data }) => {
             hideLoading();
+            setInfo(data);
           })
           .catch(() => {
             hideLoading();
@@ -58,6 +59,10 @@ export default () => {
   }, [info]);
   const handleTap = useCallback(
     function (type) {
+      if (!info) {
+        ling.current.error('请先登录');
+        return;
+      }
       switch (type) {
         case 1:
           showToast({ icon: 'error', title: '敬请期待' });
@@ -110,6 +115,9 @@ export default () => {
   const handleCloseUpdate = useCallback(function () {
     setVip('');
     handleShiftOpen();
+  }, []);
+  const handleGoBackstage = useCallback(function () {
+    navigateTo({ url: '/pages/backstage/index' });
   }, []);
   const requestInfo = useCallback(function () {
     request('/user/info')
@@ -181,6 +189,7 @@ export default () => {
           top: statusBarHeight + 'px',
           lineHeight: navHeight + 'px',
         }}
+        onLongPress={handleGoBackstage}
       >
         <Text>Welcome to Yu Salon</Text>
       </View>

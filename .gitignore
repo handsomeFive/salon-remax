@@ -2,6 +2,7 @@
 
 # dependencies
 /cloudbase/all/functions/api/node_modules
+/cloudbase/all/functions/api-qa/node_modules
 /node_modules
 /.pnp
 .pnp.js
