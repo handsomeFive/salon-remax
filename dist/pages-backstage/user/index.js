@@ -1,9 +1,24 @@
 require('./../../runtime.js');
 require('./../../remax-vendors.js');
 require('./../../remax-styles.js');
-(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[10],{
+(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["pages-backstage/user/index"],{
 
-/***/ 17:
+/***/ "./src/pages-backstage/user/index.css":
+/*!********************************************!*\
+  !*** ./src/pages-backstage/user/index.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/pages-backstage/user/index.css?modules":
+/*!****************************************************!*\
+  !*** ./src/pages-backstage/user/index.css?modules ***!
+  \****************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -11,57 +26,149 @@ module.exports = {"app":"app___2e-A7","item":"item___3PWD_","info":"info___kcoCS
 
 /***/ }),
 
-/***/ 74:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(90);
-
-
-/***/ }),
-
-/***/ 75:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 90:
+/***/ "./src/pages-backstage/user/index.entry.js":
+/*!*************************************************!*\
+  !*** ./src/pages-backstage/user/index.entry.js ***!
+  \*************************************************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _remax_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @remax/runtime */ "./node_modules/@remax/runtime/esm/index.js");
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.js */ "./src/pages-backstage/user/index.js");
+__webpack_require__(/*! ./index.css */ "./src/pages-backstage/user/index.css");
 
-// EXTERNAL MODULE: ./node_modules/@remax/runtime/esm/index.js + 25 modules
-var esm = __webpack_require__(2);
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: ./node_modules/@remax/wechat/esm/index.js + 53 modules
-var wechat_esm = __webpack_require__(3);
+Page(Object(_remax_runtime__WEBPACK_IMPORTED_MODULE_0__["createPageConfig"])(_index_js__WEBPACK_IMPORTED_MODULE_1__["default"], 'pages-backstage/user/index'));
 
-// EXTERNAL MODULE: ./src/hooks/useDidMount.js
-var useDidMount = __webpack_require__(9);
+/***/ }),
 
-// EXTERNAL MODULE: ./src/utils/index.js
-var utils = __webpack_require__(8);
+/***/ "./src/pages-backstage/user/index.js":
+/*!*******************************************!*\
+  !*** ./src/pages-backstage/user/index.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// EXTERNAL MODULE: ./src/components/List/index.js + 2 modules
-var List = __webpack_require__(14);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _remax_wechat__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @remax/wechat */ "./node_modules/@remax/wechat/esm/index.js");
+/* harmony import */ var _hooks_useDidMount__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../hooks/useDidMount */ "./src/hooks/useDidMount.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils */ "./src/utils/index.js");
+/* harmony import */ var _components_List__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/List */ "./src/components/List/index.js");
+/* harmony import */ var _index_css_modules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.css?modules */ "./src/pages-backstage/user/index.css?modules");
+/* harmony import */ var _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_css_modules__WEBPACK_IMPORTED_MODULE_5__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
-// EXTERNAL MODULE: ./src/pages-backstage/user/index.css?modules
-var usermodules = __webpack_require__(17);
-var usermodules_default = /*#__PURE__*/__webpack_require__.n(usermodules);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-// CONCATENATED MODULE: ./src/pages-backstage/user/index.js
-function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly){symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});}keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){var _i=arr&&(typeof Symbol!=="undefined"&&arr[Symbol.iterator]||arr["@@iterator"]);if(_i==null)return;var _arr=[];var _n=true;var _d=false;var _s,_e;try{for(_i=_i.call(arr);!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}var actions=[{data:'1',text:'查看记录',color:'#faad14'}// { data: '2', text: '删除', color: '#ff4d4f', type: 'warn' },
-];/* harmony default export */ var user = (function(props){var _useState=Object(react["useState"])([]),_useState2=_slicedToArray(_useState,2),data=_useState2[0],setData=_useState2[1];var renderFunction=Object(react["useCallback"])(function(data){var nickName=data.nickName,balance=data.balance,avatarUrl=data.avatarUrl;var end=balance>100?/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.add},"\xA5",balance):/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.del},"\xA5",balance);return/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.item,key:data._id,__key:data._id},/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.content},/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.part},/*#__PURE__*/react_default.a.createElement(wechat_esm["c" /* Image */],{src:avatarUrl,className:usermodules_default.a.avatar}),/*#__PURE__*/react_default.a.createElement(wechat_esm["g" /* Text */],{className:usermodules_default.a.title},nickName)),/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.part},/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],{className:usermodules_default.a.dec},"\u4F59\u989D\uFF1A"),end)));},[]);var handleTapOption=Object(react["useCallback"])(function(optionValue,item){if(optionValue==='1'){Object(wechat_esm["r" /* navigateTo */])({url:"/pages-backstage/user-order/index?phoneNumber=".concat(item.phoneNumber,"&user=").concat(item.nickName)});}else{}},[data]);Object(useDidMount["a" /* default */])(function(){Object(wechat_esm["x" /* showLoading */])();Object(wechat_esm["v" /* setNavigationBarTitle */])({title:'用户管理'});Object(utils["a" /* request */])('/user/list').then(function(_ref){var list=_ref.list;setData(list);Object(wechat_esm["o" /* hideLoading */])();}).catch(function(){Object(wechat_esm["o" /* hideLoading */])();});});return/*#__PURE__*/react_default.a.createElement(wechat_esm["h" /* View */],null,/*#__PURE__*/react_default.a.createElement(List["a" /* default */],{data:data.map(function(item){return _objectSpread(_objectSpread({},item),{},{options:actions});}),onTapOption:handleTapOption,render:renderFunction}));});
-// CONCATENATED MODULE: ./src/pages-backstage/user/index.entry.js
-__webpack_require__(75);Page(Object(esm["f" /* createPageConfig */])(user,'pages-backstage/user/index'));
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+var actions = [{
+  data: '1',
+  text: '查看记录',
+  color: '#faad14'
+} // { data: '2', text: '删除', color: '#ff4d4f', type: 'warn' },
+];
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      data = _useState2[0],
+      setData = _useState2[1];
+
+  var renderFunction = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function (data) {
+    var nickName = data.nickName,
+        balance = data.balance,
+        avatarUrl = data.avatarUrl;
+    var end = balance > 100 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.add
+    }, "\xA5", balance) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.del
+    }, "\xA5", balance);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.item,
+      key: data._id,
+      __key: data._id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.content
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.part
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+      src: avatarUrl,
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.avatar
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["Text"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.title
+    }, nickName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.part
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], {
+      className: _index_css_modules__WEBPACK_IMPORTED_MODULE_5___default.a.dec
+    }, "\u4F59\u989D\uFF1A"), end)));
+  }, []);
+  var handleTapOption = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function (optionValue, item) {
+    if (optionValue === '1') {
+      Object(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["navigateTo"])({
+        url: "/pages-backstage/user-order/index?phoneNumber=".concat(item.phoneNumber, "&user=").concat(item.nickName)
+      });
+    } else {}
+  }, [data]);
+  Object(_hooks_useDidMount__WEBPACK_IMPORTED_MODULE_2__["default"])(function () {
+    Object(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["showLoading"])();
+    Object(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["setNavigationBarTitle"])({
+      title: '用户管理'
+    });
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["request"])('/user/list').then(function (_ref) {
+      var list = _ref.list;
+      setData(list);
+      Object(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["hideLoading"])();
+    }).catch(function () {
+      Object(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["hideLoading"])();
+    });
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_remax_wechat__WEBPACK_IMPORTED_MODULE_1__["View"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_List__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    data: data.map(function (item) {
+      return _objectSpread(_objectSpread({}, item), {}, {
+        options: actions
+      });
+    }),
+    onTapOption: handleTapOption,
+    render: renderFunction
+  }));
+});
+
+/***/ }),
+
+/***/ 9:
+/*!*******************************************************!*\
+  !*** multi ./src/pages-backstage/user/index.entry.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! /Users/grig/Desktop/grig/salon-remax/src/pages-backstage/user/index.entry.js */"./src/pages-backstage/user/index.entry.js");
+
 
 /***/ })
 
-},[[74,0,1,2]]]);
+},[[9,"runtime","remax-vendors","remax-styles"]]]);

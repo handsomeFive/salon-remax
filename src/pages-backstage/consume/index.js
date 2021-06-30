@@ -22,6 +22,7 @@ export default function () {
   const [number, setNumber] = useState(); // 会员号
   const [spend, setSpend] = useState(); // 充值金额
   const [presenter, setPresenter] = useState(); // 赠送金额
+  const [custom, setCustom] = useState(); // 自定义金额
   const [current, setCurrent] = useState(); //
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -34,6 +35,7 @@ export default function () {
       number: setNumber,
       spend: setSpend,
       presenter: setPresenter,
+      custom: setCustom,
     }[type];
     handle(value);
   }, []);
@@ -48,8 +50,8 @@ export default function () {
       } else if (type === '1' && Number(spend) < 0) {
         ling.current.error('充值金额不能小于0');
         return;
-      } else if (type === '2' && !current) {
-        ling.current.error('请选择消费产品');
+      } else if (type === '2' && !current && !custom) {
+        ling.current.error('请选择或输入价格');
         return;
       }
       let path = type === '1' ? '/order/recharge' : '/order/consume';
@@ -61,8 +63,10 @@ export default function () {
         data.payment = Number(spend);
       } else {
         // 消费
-        data.cost = Number(product[current].price);
-        data.product = product[current];
+        data.cost = current ? Number(product[current].price) : Number(custom);
+        data.product = current
+          ? product[current]
+          : { _id: 'custom', name: '自定义价格', price: custom };
       }
       showLoading();
       setLoading(true);
@@ -78,7 +82,7 @@ export default function () {
           ling.current.error(error.message || '操作失败');
         });
     },
-    [type, number, spend, presenter, current, product]
+    [type, number, spend, presenter, current, product, custom]
   );
   const handleScan = useCallback(function () {
     scanCode({
@@ -129,6 +133,15 @@ export default function () {
                 disabled
               ></Input>
             </Picker>
+          </View>
+          <View className={styles.item}>
+            <View className={styles.label}>自定义价格</View>
+            <Input
+              value={custom}
+              type="number"
+              onInput={handleChangeInput.bind(null, 'custom')}
+              placeholder="请输入自定义价格"
+            />
           </View>
         </>
       );

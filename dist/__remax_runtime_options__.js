@@ -950,6 +950,7 @@ module.exports = {
   "pages-backstage/consume/index": [],
   "pages-backstage/product/index": [],
   "pages-backstage/order/index": [],
+  "pages-backstage/order-consume/index": [],
   "pages-backstage/user/index": [],
   "pages-backstage/user-order/index": []
 },

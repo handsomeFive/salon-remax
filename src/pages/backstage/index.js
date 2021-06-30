@@ -21,8 +21,9 @@ const menu = [
   { title: '充值', type: 1 },
   { title: '消费', type: 2 },
   { title: '产品', type: 3 },
-  { title: '流水', type: 4 },
-  { title: '用户', type: 5 },
+  { title: '用户', type: 4 },
+  { title: '流水', type: 5 },
+  { title: '记录', type: 6 },
 ];
 
 export default () => {
@@ -45,10 +46,13 @@ export default () => {
             navigateTo({ url: '/pages-backstage/product/index' });
             break;
           case 4:
-            navigateTo({ url: '/pages-backstage/order/index' });
+            navigateTo({ url: '/pages-backstage/user/index' });
             break;
           case 5:
-            navigateTo({ url: '/pages-backstage/user/index' });
+            navigateTo({ url: '/pages-backstage/order/index' });
+            break;
+          case 6:
+            navigateTo({ url: '/pages-backstage/order-consume/index' });
             break;
         }
       }

@@ -16,6 +16,7 @@ module.exports = {
         'consume/index',
         'product/index',
         'order/index',
+        'order-consume/index',
         'user/index',
         'user-order/index',
       ],
