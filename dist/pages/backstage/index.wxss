@@ -16,7 +16,7 @@
 }
 .info {
   width: 100%;
-  height: 380rpx;
+  height: 420rpx;
   position: relative;
   background: #fff;
 }
@@ -97,7 +97,7 @@
 }
 .info___33Oc1 {
   width: 100%;
-  height: 380rpx;
+  height: 420rpx;
   position: relative;
   background: #fff;
 }

@@ -26,5 +26,6 @@
         "user-order/index"
       ]
     }
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }
