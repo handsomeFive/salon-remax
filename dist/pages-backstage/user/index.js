@@ -159,7 +159,7 @@ var actions = [{
 
 /***/ }),
 
-/***/ 9:
+/***/ 10:
 /*!*******************************************************!*\
   !*** multi ./src/pages-backstage/user/index.entry.js ***!
   \*******************************************************/
@@ -171,4 +171,4 @@ module.exports = __webpack_require__(/*! /Users/grig/Desktop/grig/salon-remax/sr
 
 /***/ })
 
-},[[9,"runtime","remax-vendors","remax-styles"]]]);
+},[[10,"runtime","remax-vendors","remax-styles"]]]);

@@ -43,13 +43,20 @@ async function add(event, cloud) {
 async function update(event, cloud) {
   try {
     const userDB = cloud.database().collection('user_salon');
-    const { errMsg } = await userDB.doc(event.id).update({
-      data: { phoneNumber: event.phoneNumber, updateTime: +new Date() },
-    });
-    if (isOk(errMsg)) {
-      return { code: 200, message: '成功' };
+    const { errMsg: err, data } = await userDB
+      .where({ phoneNumber: event.phoneNumber })
+      .get();
+    if (data.length) {
+      return { code: 300, message: '该手机已注册' };
     } else {
-      return { code: 500, message: errMsg };
+      const { errMsg } = await userDB.doc(event.id).update({
+        data: { phoneNumber: event.phoneNumber, updateTime: +new Date() },
+      });
+      if (isOk(errMsg)) {
+        return { code: 200, message: '成功' };
+      } else {
+        return { code: 500, message: errMsg };
+      }
     }
   } catch (error) {
     return { code: 500, message: error.errMsg };

@@ -138,7 +138,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /***/ }),
 
-/***/ 10:
+/***/ 11:
 /*!*************************************************************!*\
   !*** multi ./src/pages-backstage/user-order/index.entry.js ***!
   \*************************************************************/
@@ -150,4 +150,4 @@ module.exports = __webpack_require__(/*! /Users/grig/Desktop/grig/salon-remax/sr
 
 /***/ })
 
-},[[10,"runtime","remax-vendors","remax-styles"]]]);
+},[[11,"runtime","remax-vendors","remax-styles"]]]);
