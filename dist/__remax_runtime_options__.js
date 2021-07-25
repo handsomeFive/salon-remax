@@ -952,7 +952,8 @@ module.exports = {
   "pages-backstage/order/index": [],
   "pages-backstage/order-consume/index": [],
   "pages-backstage/user/index": [],
-  "pages-backstage/user-order/index": []
+  "pages-backstage/user-order/index": [],
+  "pages-backstage/collect/index": []
 },
       appEvents: []
     }

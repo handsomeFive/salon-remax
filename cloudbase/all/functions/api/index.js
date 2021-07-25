@@ -1,10 +1,10 @@
 const cloud = require('wx-server-sdk');
 const api = require('./modals');
 
-// dev:salon-2ghjr0kcb8610c74
-// pro:salon-pro-9gyzqbsw939ef20a
+// dev:salon-qa-7gxk00q63f552c86
+// pro:salon-6gzbd1yr731b7056
 
-cloud.init({ env: 'salon-pro-9gyzqbsw939ef20a' });
+cloud.init({ env: 'salon-6gzbd1yr731b7056' });
 
 exports.main = async (event, context) => {
   const { url, data } = event;

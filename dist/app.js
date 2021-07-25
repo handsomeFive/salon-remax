@@ -12106,8 +12106,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var envId = {
-  development: 'salon-2ghjr0kcb8610c74',
-  production: 'salon-pro-9gyzqbsw939ef20a'
+  development: 'salon-qa-7gxk00q63f552c86',
+  production: 'salon-6gzbd1yr731b7056'
 }["development"];
 remax_wechat__WEBPACK_IMPORTED_MODULE_1__["cloud"].init({
   env: envId

@@ -85,7 +85,7 @@ export default () => {
     function () {
       if (vip.match(/^1[0-9]{10}$/)) {
         showLoading();
-        request('/user/update', { id: info._id, phoneNumber: vip })
+        request('/user/register', { id: info._id, phoneNumber: vip })
           .then(() => {
             ling.current.success('开通成功');
             hideLoading();

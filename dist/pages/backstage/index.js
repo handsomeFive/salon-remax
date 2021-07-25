@@ -114,6 +114,9 @@ var menu = [{
 }, {
   title: '记录',
   type: 6
+}, {
+  title: '汇总',
+  type: 7
 }];
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var _useNavHeight = Object(_hooks_useNavHeight__WEBPACK_IMPORTED_MODULE_5__["default"])(),
@@ -169,6 +172,12 @@ var menu = [{
         case 6:
           Object(remax_wechat__WEBPACK_IMPORTED_MODULE_2__["navigateTo"])({
             url: '/pages-backstage/order-consume/index'
+          });
+          break;
+
+        case 7:
+          Object(remax_wechat__WEBPACK_IMPORTED_MODULE_2__["navigateTo"])({
+            url: '/pages-backstage/collect/index'
           });
           break;
       }

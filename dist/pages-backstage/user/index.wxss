@@ -53,6 +53,45 @@
   display: flex;
   align-items: center;
 }
+.form {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.formItem {
+  height: 108rpx;
+  padding-bottom: 24rpx;
+  font-size: 28rpx;
+  color: #bfbfbf;
+}
+.phone {
+  height: 108rpx;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .btn {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer .btn.cancel {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer .btn.ok {
+  background: #1e8aff;
+  color: #ffffff;
+}
 
 .app___2e-A7 {
   background-color: #f6f7f8;
@@ -107,5 +146,44 @@
 .part___39cFk {
   display: flex;
   align-items: center;
+}
+.form___1GF1H {
+  width: 590rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+}
+.formItem___1GI-L {
+  height: 108rpx;
+  padding-bottom: 24rpx;
+  font-size: 28rpx;
+  color: #bfbfbf;
+}
+.phone___3G-HG {
+  height: 108rpx;
+}
+.footer___45yvg {
+  display: flex;
+  justify-content: space-between;
+}
+.footer___45yvg .btn___1rKmS {
+  width: 243rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 45rpx;
+}
+.footer___45yvg .btn___1rKmS.cancel___1-65B {
+  background: #f1f1f1;
+  color: #6a6a6a;
+}
+.footer___45yvg .btn___1rKmS.ok___kywdl {
+  background: #1e8aff;
+  color: #ffffff;
 }
 

@@ -13,7 +13,6 @@ import styles from './index.css';
 import dayjs from 'dayjs';
 
 export default function (props) {
-  const { query } = props.location;
   const [data, setData] = useState([]);
   const renderFunction = useCallback(function (data) {
     const { type, info, date, user } = data;

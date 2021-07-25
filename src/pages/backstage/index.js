@@ -24,6 +24,7 @@ const menu = [
   { title: '用户', type: 4 },
   { title: '流水', type: 5 },
   { title: '记录', type: 6 },
+  { title: '汇总', type: 7 },
 ];
 
 export default () => {
@@ -53,6 +54,9 @@ export default () => {
             break;
           case 6:
             navigateTo({ url: '/pages-backstage/order-consume/index' });
+            break;
+          case 7:
+            navigateTo({ url: '/pages-backstage/collect/index' });
             break;
         }
       }

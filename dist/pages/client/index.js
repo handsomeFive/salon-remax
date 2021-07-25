@@ -960,7 +960,7 @@ var menu = [{
   var handleUpgrade = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(function () {
     if (vip.match(/^1[0-9]{10}$/)) {
       Object(remax_wechat__WEBPACK_IMPORTED_MODULE_1__["showLoading"])();
-      Object(_utils__WEBPACK_IMPORTED_MODULE_2__["request"])('/user/update', {
+      Object(_utils__WEBPACK_IMPORTED_MODULE_2__["request"])('/user/register', {
         id: info._id,
         phoneNumber: vip
       }).then(function () {

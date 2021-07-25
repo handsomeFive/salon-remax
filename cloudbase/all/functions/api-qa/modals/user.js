@@ -40,7 +40,7 @@ async function add(event, cloud) {
   }
 }
 
-async function update(event, cloud) {
+async function register(event, cloud) {
   try {
     const userDB = cloud.database().collection('user_salon');
     const { errMsg: err, data } = await userDB
@@ -62,6 +62,28 @@ async function update(event, cloud) {
     return { code: 500, message: error.errMsg };
   }
 }
+async function update(event, cloud) {
+  try {
+    const userDB = cloud.database().collection('user_salon');
+    const { _id, ...other } = event;
+    const { data } = await userDB.doc(_id).get();
+    if (!data) {
+      return { code: 300, message: '无此用户' };
+    } else {
+      const { errMsg } = await userDB.doc(_id).update({
+        data: { ...other, updateTime: +new Date() },
+      });
+      if (isOk(errMsg)) {
+        return { code: 200, message: '成功', data: { ...data, ...other } };
+      } else {
+        return { code: 500, message: errMsg };
+      }
+    }
+  } catch (error) {
+    return { code: 500, message: error.errMsg };
+  }
+}
+
 async function getUserInfo(event, cloud) {
   try {
     const userDB = cloud.database().collection('user_salon');
@@ -93,7 +115,8 @@ async function getUserList(event, cloud) {
 
 module.exports = {
   '/user/add': add,
-  '/user/update': update,
+  '/user/register': register,
   '/user/info': getUserInfo,
   '/user/list': getUserList,
+  '/user/update': update,
 };

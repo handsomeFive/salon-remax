@@ -84,8 +84,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var query = props.location.query;
-
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
       data = _useState2[0],

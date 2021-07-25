@@ -24,7 +24,8 @@
         "order/index",
         "order-consume/index",
         "user/index",
-        "user-order/index"
+        "user-order/index",
+        "collect/index"
       ]
     }
   ]

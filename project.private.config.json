@@ -39,6 +39,19 @@
         {
           "name": "pages-backstage/user/index",
           "pathName": "pages-backstage/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/backstage/index",
+          "pathName": "pages/backstage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "汇总",
+          "pathName": "pages-backstage/collect/index",
+          "query": "",
           "scene": null
         }
       ]
