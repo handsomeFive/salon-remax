@@ -92,6 +92,9 @@
   background: #1e8aff;
   color: #ffffff;
 }
+.search {
+  padding: 12rpx;
+}
 
 .app___2e-A7 {
   background-color: #f6f7f8;
@@ -185,5 +188,8 @@
 .footer___45yvg .btn___1rKmS.ok___kywdl {
   background: #1e8aff;
   color: #ffffff;
+}
+.search___1iZ6R {
+  padding: 12rpx;
 }
 

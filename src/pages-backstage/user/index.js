@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import {
   hideLoading,
   showLoading,
@@ -14,16 +14,19 @@ import { request } from '../../utils';
 import List from '../../components/List';
 import Modal from '../../components/Modal';
 import styles from './index.css';
+import { Ling, SearchBar } from 'annar';
 
 const actions = [
   { data: '1', text: '查看记录', color: '#faad14' },
   { data: '2', text: '编号', color: '#ff4d4f', type: 'warn' },
 ];
 export default function (props) {
+  const ling = useRef();
   const [data, setData] = useState([]);
   const [open, setOpen] = useState(false);
-  const [alternativeName, setAlternativeName] = useState();
+  const [alternativeName, setAlternativeName] = useState('');
   const [currentId, setCurrentId] = useState('');
+  const [search, setSearch] = useState('');
   const renderFunction = useCallback(function (data) {
     const { nickName, alternativeName, balance, avatarUrl } = data;
     const end =
@@ -69,10 +72,37 @@ export default function (props) {
     setCurrentId('');
     setAlternativeName('');
   }, []);
+  const handleChangeSearch = useCallback(function (search) {
+    setSearch(search);
+  }, []);
+  const handleSearch = useCallback(
+    function (key) {
+      showLoading();
+      const param = typeof key !== 'undefined' ? { search: key } : { search };
+      request('/user/list', param)
+        .then(({ list }) => {
+          setData(list);
+          hideLoading();
+        })
+        .catch(() => {
+          hideLoading();
+        });
+    },
+    [search]
+  );
+  const handleClearSearch = useCallback(
+    function () {
+      setSearch('');
+      if (search) {
+        handleSearch('');
+      }
+    },
+    [search]
+  );
   const handleUpgrade = useCallback(
     function () {
       showLoading();
-      request('/user/update', { _id: currentId, alternativeName })
+      request('/user/nickName', { _id: currentId, alternativeName })
         .then(({ data: result }) => {
           const copy = data.slice();
           const index = copy.findIndex((item) => item._id === currentId);
@@ -85,27 +115,30 @@ export default function (props) {
           setAlternativeName('');
           setOpen(false);
         })
-        .catch(() => {
+        .catch(({ message }) => {
+          ling.current.error(message);
           hideLoading();
         });
     },
     [data, currentId, alternativeName]
   );
   useDidMount(function () {
-    showLoading();
     setNavigationBarTitle({ title: '用户管理' });
-    request('/user/list')
-      .then(({ list }) => {
-        setData(list);
-        hideLoading();
-      })
-      .catch(() => {
-        hideLoading();
-      });
+    handleSearch();
   });
 
   return (
     <View>
+      <Ling ref={ling} />
+      <View className={styles.search}>
+        <SearchBar
+          placeholder="请输入微信名或编号"
+          value={search}
+          onInput={handleChangeSearch}
+          onClear={handleClearSearch}
+          onSubmit={handleSearch}
+        />
+      </View>
       <List
         data={data.map((item) => ({ ...item, options: actions }))}
         onTapOption={handleTapOption}
@@ -121,7 +154,7 @@ export default function (props) {
             className={styles.phone}
             type="text"
             placeholder="请输入编号"
-            onInput={({ detail }) => setAlternativeName(detail.value)}
+            onInput={({ detail }) => setAlternativeName(detail.value.trim())}
           ></Input>
           <View className={styles.footer}>
             <View

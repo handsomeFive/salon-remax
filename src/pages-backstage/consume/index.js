@@ -163,7 +163,7 @@ export default function () {
               type="number"
               value={number}
               onInput={handleChangeInput.bind(null, 'number')}
-              placeholder="请输入会员号或扫描"
+              placeholder="请输入会员号或编号或扫描"
             />
           </View>
           <View className={styles.item}>

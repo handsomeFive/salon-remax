@@ -7,9 +7,12 @@ async function recharge(event, cloud) {
     const orderDB = db.collection('order');
     const userDB = db.collection('user_salon');
     const { data, errMsg } = await userDB
-      .where({
-        phoneNumber: event.phoneNumber,
-      })
+      .where(
+        _.or([
+          { phoneNumber: event.phoneNumber },
+          { alternativeName: event.phoneNumber },
+        ])
+      )
       .get();
     if (isOk(errMsg)) {
       if (!data.length) {
@@ -45,9 +48,12 @@ async function consume(event, cloud) {
     const orderDB = db.collection('order');
     const userDB = db.collection('user_salon');
     const { data, errMsg } = await userDB
-      .where({
-        phoneNumber: event.phoneNumber,
-      })
+      .where(
+        _.or([
+          { phoneNumber: event.phoneNumber },
+          { alternativeName: event.phoneNumber },
+        ])
+      )
       .get();
     if (isOk(errMsg)) {
       if (!data.length) {

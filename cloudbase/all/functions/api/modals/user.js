@@ -84,6 +84,37 @@ async function update(event, cloud) {
   }
 }
 
+async function takeNickName(event, cloud) {
+  try {
+    const userDB = cloud.database().collection('user_salon');
+    const { _id, alternativeName } = event;
+    const { data } = await userDB.doc(_id).get();
+    if (!data) {
+      return { code: 300, message: '无此用户' };
+    } else {
+      const { data: userData } = await userDB.where({ alternativeName }).get();
+      console.log(userData, { alternativeName });
+      if (userData.length) {
+        return { code: 300, message: '该昵称已被占用' };
+      }
+      const { errMsg } = await userDB.doc(_id).update({
+        data: { alternativeName, updateTime: +new Date() },
+      });
+      if (isOk(errMsg)) {
+        return {
+          code: 200,
+          message: '成功',
+          data: { ...data, alternativeName },
+        };
+      } else {
+        return { code: 500, message: errMsg };
+      }
+    }
+  } catch (error) {
+    return { code: 500, message: error.errMsg };
+  }
+}
+
 async function getUserInfo(event, cloud) {
   try {
     const userDB = cloud.database().collection('user_salon');
@@ -106,7 +137,22 @@ async function getUserInfo(event, cloud) {
 async function getUserList(event, cloud) {
   try {
     const db = cloud.database();
+    const _ = db.command;
     const userDB = db.collection('user_salon');
+    if (event.search) {
+      return getList(
+        userDB
+          .where(
+            _.or([
+              { nickName: db.RegExp({ regexp: event.search }) },
+              {
+                alternativeName: db.RegExp({ regexp: event.search }),
+              },
+            ])
+          )
+          .orderBy('updateTime', 'desc')
+      );
+    }
     return getList(userDB.orderBy('updateTime', 'desc'));
   } catch (error) {
     return { code: 500, message: error.errMsg };
@@ -119,4 +165,5 @@ module.exports = {
   '/user/info': getUserInfo,
   '/user/list': getUserList,
   '/user/update': update,
+  '/user/nickName': takeNickName,
 };
