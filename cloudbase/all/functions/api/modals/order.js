@@ -18,6 +18,7 @@ async function recharge(event, cloud) {
       if (!data.length) {
         return { code: 300, message: '未查到该用户或未开通会员' };
       } else {
+        event.phoneNumber = data[0].phoneNumber;
         await userDB.doc(data[0]._id).update({
           data: { balance: _.inc(event.recharge), updateTime: +new Date() },
         });
@@ -26,7 +27,7 @@ async function recharge(event, cloud) {
             type: 1,
             date: +new Date(),
             user: data[0].nickName,
-            userPhoneNumber: event.phoneNumber,
+            userPhoneNumber: data[0].phoneNumber,
             money: event.payment,
             info: event,
           },
@@ -63,6 +64,7 @@ async function consume(event, cloud) {
       } else if (data[0].balance < event.cost) {
         return { code: 300, message: '余额' + data[0].balance + ',不足消费' };
       } else {
+        event.phoneNumber = data[0].phoneNumber;
         await userDB.doc(data[0]._id).update({
           data: { balance: _.inc(0 - event.cost), updateTime: +new Date() },
         });
@@ -71,7 +73,7 @@ async function consume(event, cloud) {
             type: 2,
             date: +new Date(),
             user: data[0].nickName,
-            userPhoneNumber: event.phoneNumber,
+            userPhoneNumber: data[0].phoneNumber,
             money: event.cost,
             info: event,
           },

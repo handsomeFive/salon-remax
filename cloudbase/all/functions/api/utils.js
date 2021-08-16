@@ -37,13 +37,13 @@ async function getList(collection, event) {
     }
     if (tasks.length) {
       const resList = await Promise.all(tasks);
-      const { data, errMsg, list } = resList.reduce((acc, cur) => {
+      const { errMsg, list } = resList.reduce((acc, cur) => {
         return {
-          list: acc.data.concat(cur.data),
+          list: (acc.list || []).concat(cur.data),
           errMsg: acc.errMsg,
         };
-      });
-      return { code: 200, list: list || data, message: errMsg };
+      }, []);
+      return { code: 200, list: list, message: errMsg };
     } else {
       return {
         code: 200,
